@@ -171,7 +171,10 @@ p { margin: 0; }
 .origins li span { font-size: 12px; letter-spacing: 0.06em; color: var(--granite); }
 .origins li .stars { font: 500 11px/1.2 var(--body); font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
 
-/* Chefs first: the team */
+/* Chefs first: the team, in two groups (the kitchen / AI & technology) */
+.group { margin-top: 56px; display: grid; gap: 8px; justify-items: start; }
+.group p { color: var(--ivory-dim); }
+.group + .people { margin-top: 20px; }
 .stats { margin: 56px auto 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--hair); }
 .stats div { padding: 28px 24px; display: grid; gap: 8px; justify-items: center; text-align: center; }
 .stats div + div { border-left: 1px solid var(--hair); }
@@ -478,7 +481,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
         <div class="head reveal">
           <span class="label">AI &amp; automation</span>
           <h2 id="ai-title">The repetitive work, done by AI</h2>
-          <p>The chefs set the method; AI takes care of the rest. Everything on WhatsApp, in English, Malay and Mandarin.</p>
+          <p>The chefs set the method; AI takes care of the rest. Built and run by our own AI team, Iker and Anaïs. Everything on WhatsApp, in English, Malay and Mandarin.</p>
         </div>
         <div class="tiles four">
           <article class="tile-card reveal"><h3>Bookings and questions</h3><p>A WhatsApp assistant that takes bookings, answers questions and takes orders, in English, Malay and Mandarin.</p></article>
@@ -516,13 +519,15 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
         <div class="head reveal">
           <span class="label">The people</span>
           <h2 id="team-title">Chefs first</h2>
-          <p>HITO was born in the kitchens of Kuala Lumpur, where Basilio and Iker worked together. Three Spanish professionals and a Malaysian executive chef who have run kitchens, dining rooms and whole restaurant groups, between Malaysia, Spain and the Middle East.</p>
+          <p>HITO was born in the kitchens of Kuala Lumpur, where Basilio and Iker worked together. Chefs who have run kitchens and whole restaurant groups between Malaysia, Spain and the Middle East, and our own AI team, which builds the tools behind every service.</p>
         </div>
         <div class="stats reveal">
           <div><b>90+</b><span>years in hospitality between the four of us</span></div>
           <div><b>15</b><span>restaurants led in Kuala Lumpur</span></div>
           <div><b>110</b><span>people in the largest kitchen team we have led</span></div>
         </div>
+        <div class="group reveal"><span class="label">The kitchen</span>
+          <p>Chefs who run kitchens, teams and whole restaurant groups.</p></div>
         <div class="people">
           <article class="person reveal">
             <div class="who"><img class="avatar" src="fotos/equipo-basilio.jpg" width="360" height="360" alt="Basilio Martin Garcia" loading="lazy" decoding="async"><span class="pill">HITO is his idea</span></div>
@@ -532,25 +537,29 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <p class="tags">Michelin-starred kitchens · Restaurant groups · Teams that stay</p>
           </article>
           <article class="person reveal">
-            <div class="who"><img class="avatar" src="fotos/equipo-iker.jpg" width="360" height="360" alt="Iker Fernández Caballero" loading="lazy" decoding="async"></div>
-            <span class="role">Executive Chef · Costs</span>
-            <h3>Iker Fernández Caballero</h3>
-            <p>28 years in kitchens. Trained at the Luis Irizar school in San Sebastián, with a stage at Arzak (three Michelin stars). Eight years as executive head chef in Kuala Lumpur from 2016, with the Out2Dine group, alongside Basilio. Creator of CosteOS, the cost method we use with every client.</p>
-            <p class="tags">Food cost with real waste · Menu engineering · Pre-opening</p>
-          </article>
-          <article class="person reveal">
-            <div class="who"><img class="avatar" src="fotos/equipo-anais.jpg" width="360" height="360" alt="Anaïs Moragón" loading="lazy" decoding="async"></div>
-            <span class="role">Operations &amp; floor</span>
-            <h3>Anaïs Moragón</h3>
-            <p>Fourteen years running hospitality operations at the luxury end. Restaurant manager at Pazo do Souto, a 17th-century Galician manor: 60 covers a day, weddings and events from the first call to the big day. Wellness manager and deputy hotel manager on A Creba, a private island reached only by sea or helicopter, with VIP guests from Japan, Brazil and New York. Five years running the floor at A Taboa de Picar, 200 covers a day. She opened her own business at 22. Co-founder of CosteOS. Speaks Spanish, Galician, French, English and Italian.</p>
-            <p class="tags">Floor &amp; service · Weddings &amp; events · Rosters &amp; training · VIP guests</p>
-          </article>
-          <article class="person reveal">
             <div class="who"><img class="avatar" src="fotos/equipo-yusri.jpg" width="360" height="360" alt="Mohd Yusri Mohd Yusoff" loading="lazy" decoding="async"></div>
             <span class="role">Executive Chef</span>
             <h3>Mohd Yusri Mohd Yusoff</h3>
             <p>Over 25 years in kitchens, from Kuala Lumpur hotels to the Middle East. Chef de cuisine at Anantara Desaru, group executive chef of Hyde Park in Malaysia, head chef of La Bodega in Bangsar, where he worked with Basilio, and executive chef on the NEOM project in Saudi Arabia. Western, Asian and Middle Eastern cuisine, cost control and food safety. Speaks Malay and English.</p>
             <p class="tags">Malaysian kitchens · Large-scale operations · Food safety</p>
+          </article>
+        </div>
+        <div class="group reveal"><span class="label">AI &amp; technology</span>
+          <p>Our own AI team, which builds the tools behind every service.</p></div>
+        <div class="people">
+          <article class="person reveal">
+            <div class="who"><img class="avatar" src="fotos/equipo-iker.jpg" width="360" height="360" alt="Iker Fernández Caballero" loading="lazy" decoding="async"></div>
+            <span class="role">AI &amp; Technology · Chef</span>
+            <h3>Iker Fernández Caballero</h3>
+            <p>Chef turned software builder. He designed and built CosteOS, the platform behind our cost control: real food cost with waste, supplier invoices checked on arrival, stock levels and the day's profit at closing, with an AI chef assistant built in. He builds HITO's AI tools himself (TypeScript, React, Next.js, PostgreSQL). Before that, 28 years in kitchens: a stage at Arzak (three Michelin stars) and eight years as executive head chef in Kuala Lumpur from 2016, alongside Basilio.</p>
+            <p class="tags">AI tools · Software · Food cost with real waste</p>
+          </article>
+          <article class="person reveal">
+            <div class="who"><img class="avatar" src="fotos/equipo-anais.jpg" width="360" height="360" alt="Anaïs Moragón" loading="lazy" decoding="async"></div>
+            <span class="role">AI Automation · Operations</span>
+            <h3>Anaïs Moragón</h3>
+            <p>She builds HITO's automations: n8n workflows, APIs, POS integrations and AI for hospitality, with training in generative AI and SaaS development. Co-founder of CosteOS, where she analyses clients' real costs from their invoices and POS data. Before that, fourteen years running luxury hospitality: restaurant manager at Pazo do Souto, deputy hotel manager on the private island of A Creba and five years running the floor at A Taboa de Picar, 200 covers a day. Speaks Spanish, Galician, French, English and Italian.</p>
+            <p class="tags">AI automation · n8n &amp; integrations · Operations</p>
           </article>
         </div>
         <div class="origins reveal">

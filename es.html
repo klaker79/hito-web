@@ -171,7 +171,10 @@ p { margin: 0; }
 .origins li span { font-size: 12px; letter-spacing: 0.06em; color: var(--granite); }
 .origins li .stars { font: 500 11px/1.2 var(--body); font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
 
-/* Chefs first: the team */
+/* Chefs first: the team, in two groups (the kitchen / AI & technology) */
+.group { margin-top: 56px; display: grid; gap: 8px; justify-items: start; }
+.group p { color: var(--ivory-dim); }
+.group + .people { margin-top: 20px; }
 .stats { margin: 56px auto 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--hair); }
 .stats div { padding: 28px 24px; display: grid; gap: 8px; justify-items: center; text-align: center; }
 .stats div + div { border-left: 1px solid var(--hair); }
@@ -478,7 +481,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
         <div class="head reveal">
           <span class="label">IA y automatización</span>
           <h2 id="ai-title">El trabajo repetitivo, lo hace la IA</h2>
-          <p>Los cocineros ponen el método; la IA se encarga del resto. Todo por WhatsApp, en inglés, malayo y mandarín.</p>
+          <p>Los cocineros ponen el método; la IA se encarga del resto. Lo construye y lo mantiene nuestro propio equipo de IA, Iker y Anaïs. Todo por WhatsApp, en inglés, malayo y mandarín.</p>
         </div>
         <div class="tiles four">
           <article class="tile-card reveal"><h3>Reservas y preguntas</h3><p>Un asistente de WhatsApp que coge reservas, contesta preguntas y toma pedidos, en inglés, malayo y mandarín.</p></article>
@@ -516,13 +519,15 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
         <div class="head reveal">
           <span class="label">Las personas</span>
           <h2 id="team-title">Primero, cocineros</h2>
-          <p>HITO nació en las cocinas de Kuala Lumpur, donde Basilio e Iker trabajaron juntos. Tres profesionales españoles y un chef ejecutivo malasio que han dirigido cocinas, salas y grupos de restaurantes enteros, entre Malasia, España y Oriente Medio.</p>
+          <p>HITO nació en las cocinas de Kuala Lumpur, donde Basilio e Iker trabajaron juntos. Cocineros que han dirigido cocinas y grupos de restaurantes enteros entre Malasia, España y Oriente Medio, y nuestro propio equipo de IA, que construye las herramientas de cada servicio.</p>
         </div>
         <div class="stats reveal">
           <div><b>90+</b><span>años en hostelería entre los cuatro</span></div>
           <div><b>15</b><span>restaurantes dirigidos en Kuala Lumpur</span></div>
           <div><b>110</b><span>personas en el mayor equipo de cocina que hemos dirigido</span></div>
         </div>
+        <div class="group reveal"><span class="label">La cocina</span>
+          <p>Cocineros que dirigen cocinas, equipos y grupos de restaurantes enteros.</p></div>
         <div class="people">
           <article class="person reveal">
             <div class="who"><img class="avatar" src="fotos/equipo-basilio.jpg" width="360" height="360" alt="Basilio Martin Garcia" loading="lazy" decoding="async"><span class="pill">HITO es idea suya</span></div>
@@ -532,25 +537,29 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <p class="tags">Cocinas con estrella Michelin · Grupos de restaurantes · Equipos que se quedan</p>
           </article>
           <article class="person reveal">
-            <div class="who"><img class="avatar" src="fotos/equipo-iker.jpg" width="360" height="360" alt="Iker Fernández Caballero" loading="lazy" decoding="async"></div>
-            <span class="role">Chef ejecutivo · Costes</span>
-            <h3>Iker Fernández Caballero</h3>
-            <p>28 años en cocina. Formado en la escuela Luis Irizar de San Sebastián, con stage en Arzak (tres estrellas Michelin). Ocho años como chef ejecutivo en Kuala Lumpur desde 2016, con el grupo Out2Dine, junto a Basilio. Creador de CosteOS, el método de costes que usamos con cada cliente.</p>
-            <p class="tags">Food cost con merma real · Ingeniería de menú · Preapertura</p>
-          </article>
-          <article class="person reveal">
-            <div class="who"><img class="avatar" src="fotos/equipo-anais.jpg" width="360" height="360" alt="Anaïs Moragón" loading="lazy" decoding="async"></div>
-            <span class="role">Operaciones y sala</span>
-            <h3>Anaïs Moragón</h3>
-            <p>Catorce años dirigiendo operaciones de hostelería de lujo. Gerente del restaurante del Pazo do Souto, un pazo gallego del siglo XVII: 60 cubiertos al día, bodas y eventos desde la primera llamada hasta el gran día. Wellness manager y subdirectora de hotel en A Creba, una isla privada a la que solo se llega por mar o en helicóptero, con huéspedes VIP de Japón, Brasil y Nueva York. Cinco años al frente de la sala de A Taboa de Picar, 200 cubiertos al día. Abrió su propio negocio a los 22. Cofundadora de CosteOS. Habla castellano, gallego, francés, inglés e italiano.</p>
-            <p class="tags">Sala y servicio · Bodas y eventos · Cuadrantes y formación · Huéspedes VIP</p>
-          </article>
-          <article class="person reveal">
             <div class="who"><img class="avatar" src="fotos/equipo-yusri.jpg" width="360" height="360" alt="Mohd Yusri Mohd Yusoff" loading="lazy" decoding="async"></div>
             <span class="role">Chef ejecutivo</span>
             <h3>Mohd Yusri Mohd Yusoff</h3>
             <p>Más de 25 años en cocina, de los hoteles de Kuala Lumpur a Oriente Medio. Chef de cocina en el Anantara Desaru, chef ejecutivo de grupo de Hyde Park en Malasia, jefe de cocina de La Bodega en Bangsar, donde trabajó con Basilio, y chef ejecutivo en el proyecto NEOM, en Arabia Saudí. Cocina occidental, asiática y de Oriente Medio, control de costes y seguridad alimentaria. Habla malayo e inglés.</p>
             <p class="tags">Cocinas de Malasia · Operaciones a gran escala · Seguridad alimentaria</p>
+          </article>
+        </div>
+        <div class="group reveal"><span class="label">IA y tecnología</span>
+          <p>Nuestro propio equipo de IA, que construye las herramientas de cada servicio.</p></div>
+        <div class="people">
+          <article class="person reveal">
+            <div class="who"><img class="avatar" src="fotos/equipo-iker.jpg" width="360" height="360" alt="Iker Fernández Caballero" loading="lazy" decoding="async"></div>
+            <span class="role">IA y tecnología · Chef</span>
+            <h3>Iker Fernández Caballero</h3>
+            <p>Cocinero reconvertido en creador de software. Diseñó y construyó CosteOS, la plataforma de nuestro control de costes: food cost real con merma, facturas de proveedores comprobadas al recibirlas, niveles de stock y el beneficio del día al cierre, con un chef asistente de IA integrado. Construye él mismo las herramientas de IA de HITO (TypeScript, React, Next.js, PostgreSQL). Antes, 28 años en cocina: stage en Arzak (tres estrellas Michelin) y ocho años como chef ejecutivo en Kuala Lumpur desde 2016, junto a Basilio.</p>
+            <p class="tags">Herramientas de IA · Software · Food cost con merma real</p>
+          </article>
+          <article class="person reveal">
+            <div class="who"><img class="avatar" src="fotos/equipo-anais.jpg" width="360" height="360" alt="Anaïs Moragón" loading="lazy" decoding="async"></div>
+            <span class="role">Automatización con IA · Operaciones</span>
+            <h3>Anaïs Moragón</h3>
+            <p>Construye las automatizaciones de HITO: flujos de n8n, APIs, integraciones con el TPV e IA aplicada a la hostelería, con formación en IA generativa y desarrollo SaaS. Cofundadora de CosteOS, donde analiza los costes reales de los clientes con sus albaranes y los datos del TPV. Antes, catorce años dirigiendo hostelería de lujo: gerente del restaurante del Pazo do Souto, subdirectora de hotel en la isla privada de A Creba y cinco años al frente de la sala de A Taboa de Picar, con 200 cubiertos al día. Habla castellano, gallego, francés, inglés e italiano.</p>
+            <p class="tags">Automatización con IA · n8n e integraciones · Operaciones</p>
           </article>
         </div>
         <div class="origins reveal">

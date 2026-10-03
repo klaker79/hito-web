@@ -19,8 +19,8 @@
 <style>
 /* Layout: the intro (the gold H leaves the Petronas Towers, the 3D logo assembles over Kuala Lumpur,
    the city turns behind it), then the content on solid dark ground with one ivory page:
-   what we do (the four milestones), the numbers in Malaysia, the two roads (open restaurant / from scratch),
-   the team, how we work and the discovery call with its form. */
+   what we do (the four milestones), the numbers in Malaysia, the services for open restaurants and for
+   new ones, AI & automation, marketing, the team, how we work and the discovery call with its form. */
 :root {
   --paper: #EFE8D8;
   --bg: #171411;
@@ -190,6 +190,20 @@ p { margin: 0; }
 .person p { color: var(--ivory-dim); font-size: 15px; }
 .person .tags { font-size: 13px; color: var(--granite); border-top: 1px solid var(--hair); padding-top: 14px; }
 
+/* Services list inside the road cards */
+.door .we-do { margin: 6px 0 0; font: 500 11px/1 var(--body); letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); }
+.door .services li { color: var(--ivory); }
+
+/* AI & automation, marketing: tiles */
+.tiles { margin-top: 56px; display: grid; gap: 16px; }
+.tiles.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tiles.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tile-card { border-radius: 16px; padding: 26px 24px 28px; display: grid; gap: 10px; align-content: start;
+  background: var(--bg); border: 1px solid var(--hair); }
+.tile-card h3 { font-size: 26px; line-height: 1.1; }
+.tile-card p { color: var(--ivory-dim); font-size: 15px; }
+.light .tile-card { background: var(--ink); color: var(--ivory); border-color: transparent; box-shadow: 0 30px 50px -36px rgba(33, 30, 27, 0.55); }
+
 /* How we work */
 .steps { margin: 56px 0 0; list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .steps li { background: var(--bg); border: 1px solid var(--hair); border-radius: 16px; padding: 28px 24px 30px; display: grid; gap: 12px; align-content: start; }
@@ -261,6 +275,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
 }
 @media (max-width: 560px) {
   .steps { grid-template-columns: minmax(0, 1fr); }
+  .tiles.four, .tiles.three { grid-template-columns: minmax(0, 1fr); }
   .beat .kicker { font-size: 10px; letter-spacing: 0.16em; }
   .facts { grid-template-columns: minmax(0, 1fr); }
   .stats { grid-template-columns: minmax(0, 1fr); }
@@ -291,6 +306,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
   <a class="brand" href="#top"><span class="sym"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235 235"><mask id="cuts-nav"><rect width="235" height="235" fill="white"/><path fill="black" d="M67.06,102.06 L143.24,100.96 L143.24,103.16 Z M167.94,115.78 L91.76,114.69 L91.76,116.88 Z"/></mask><path fill="#EFE8D8" mask="url(#cuts-nav)" d="M30.00,198.14 L30.00,67.75 A30.88,30.88 0 0 1 91.76,67.75 L91.76,198.14 Z M143.24,198.14 L143.24,67.75 A30.88,30.88 0 0 1 205.00,67.75 L205.00,198.14 Z M90.76,102.06 L144.24,102.06 L144.24,115.78 L90.76,115.78 Z"/></svg></span>HITO</a>
   <nav aria-label="Principal">
     <a href="#method">El método</a>
+    <a href="#for-you">Servicios</a>
     <a href="#team">Equipo</a>
     <a href="#how">Cómo trabajamos</a>
     <a class="lang" href="index.html" hreflang="en" lang="en" aria-label="Read in English">EN</a>
@@ -325,7 +341,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <span class="num" aria-hidden="true">01</span>
             <div class="name"><span class="label">Hito 01</span><h3>Concepto y apertura</h3></div>
             <div class="what"><p class="lead">Restaurantes con identidad, pensados para Kuala Lumpur.</p>
-              <p class="incl">Conceptos listos para abrir, cartas con los números hechos, nombre y marca, y un chef de apertura para las primeras semanas.</p></div>
+              <p class="incl">Conceptos con nuestra base española y europea, cartas con los números hechos, marca y los números antes de invertir.</p></div>
             </div>
           </article>
           <article class="milestone reveal">
@@ -333,7 +349,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <div class="body">
             <span class="num" aria-hidden="true">02</span>
             <div class="name"><span class="label">Hito 02</span><h3>Equipo y formación</h3></div>
-            <div class="what"><p class="lead">Un restaurante que no depende de quién se va.</p>
+            <div class="what"><p class="lead">Un equipo formado con nuestro método.</p>
               <p class="incl">Selección con nuestra red en Kuala Lumpur, formación de cocina y sala en el idioma de tu equipo, manuales y supervisión.</p></div>
             </div>
           </article>
@@ -399,7 +415,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
     <section class="block light" id="for-you" aria-labelledby="for-you-title">
       <div class="wrap">
         <div class="head reveal">
-          <span class="label">Para quién</span>
+          <span class="label">Servicios</span>
           <h2 id="for-you-title">Dos caminos llevan a HITO</h2>
           <p>Tu restaurante ya está abierto, o estás a punto de abrir uno. En los dos casos, los problemas empiezan mucho antes de que los veas.</p>
         </div>
@@ -412,11 +428,21 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <ul class="checks">
               <li>Food cost disparado por la subida de los proveedores.</li>
               <li>El personal entra y sale, y nadie lo forma.</li>
-              <li>Todo depende de tu jefe de cocina.</li>
-              <li>El alquiler y las comisiones del delivery se comen tu margen.</li>
               <li>Cada turno se hace de una manera distinta.</li>
             </ul>
-            <p class="promise">Ponemos orden en la cocina y en los números.</p>
+            <h4 class="we-do">Qué hacemos</h4>
+            <ul class="checks services">
+              <li>Control de costes con merma real: el food cost de verdad de cada plato, con el método CosteOS.</li>
+              <li>Tu restaurante en 5 minutos al día: ventas, coste y beneficio por WhatsApp cada noche.</li>
+              <li>Alertas de precios de proveedores y el coste de cada plato en RM.</li>
+              <li>Previsión de demanda, control de stock y pedidos automáticos a proveedores.</li>
+              <li>Formación del personal con nuestro método, academia en vídeo en los idiomas de tu equipo y un asistente de WhatsApp para la cocina.</li>
+              <li>Manual de operaciones de cocina, sala, limpieza, apertura y cierre.</li>
+              <li>Un chef ejecutivo externo sin contratarlo a tiempo completo, y un chef de guardia por WhatsApp.</li>
+              <li>Para grupos: informes, compras y finanzas unificados, y cocina central con tus propias recetas.</li>
+              <li>Seguimiento mensual y visitas al local de Basilio en Kuala Lumpur.</li>
+            </ul>
+            <p class="promise">Encontramos dónde se va tu beneficio, y lo arreglamos.</p>
             </div>
           </article>
           <article class="door reveal">
@@ -426,14 +452,61 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <h3>Abrir mal cuesta más que no abrir</h3>
             <ul class="checks">
               <li>Un concepto que no encaja con el cliente de Kuala Lumpur.</li>
-              <li>Sobrecostes en obra y equipamiento.</li>
               <li>Un alquiler que los números no aguantan.</li>
               <li>Llegar a la apertura sin equipo y sin manuales.</li>
-              <li>Un punto de equilibrio que no llega nunca.</li>
+            </ul>
+            <h4 class="we-do">Qué hacemos</h4>
+            <ul class="checks services">
+              <li>Conceptos con lo que traemos de España y de Europa: cocina mediterránea, tapas, pintxos, cocina gallega, vasca e italiana.</li>
+              <li>Un estudio de la zona antes de elegir: competencia, precios y reseñas.</li>
+              <li>Los números antes de invertir: inversión, food cost y punto de equilibrio.</li>
+              <li>La carta y un recetario estandarizado, con cada plato escandallado.</li>
+              <li>La marca de tu restaurante.</li>
+              <li>Tu equipo: cocineros seleccionados con nuestra red en Kuala Lumpur y formados con nuestro método.</li>
+              <li>Un manual de operaciones listo desde el primer día.</li>
+              <li>Traer una marca española a Malasia: franquicia o licencia, con HITO llevando la apertura.</li>
             </ul>
             <p class="promise">Te entregamos el restaurante pensado: equipo, método y números desde el primer día.</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="ai" style="background:var(--ink)" aria-labelledby="ai-title">
+      <div class="wrap">
+        <div class="head reveal">
+          <span class="label">IA y automatización</span>
+          <h2 id="ai-title">El trabajo repetitivo, lo hace la IA</h2>
+          <p>Los cocineros ponen el método; la IA se encarga del resto. Todo por WhatsApp, en inglés, malayo y mandarín.</p>
+        </div>
+        <div class="tiles four">
+          <article class="tile-card reveal"><h3>Reservas y preguntas</h3><p>Un asistente de WhatsApp que coge reservas, contesta preguntas y toma pedidos, en inglés, malayo y mandarín.</p></article>
+          <article class="tile-card reveal"><h3>El teléfono, contestado</h3><p>Un agente de voz que coge el teléfono y apunta reservas, también fuera de horario.</p></article>
+          <article class="tile-card reveal"><h3>Adiós a los no-shows</h3><p>Recordatorios automáticos antes de cada reserva.</p></article>
+          <article class="tile-card reveal"><h3>Reseñas de Google</h3><p>Una respuesta a cada reseña, y una petición de reseña después de cada visita.</p></article>
+          <article class="tile-card reveal"><h3>Clientes que vuelven</h3><p>Mensajes de fidelización por WhatsApp a quien ya vino.</p></article>
+          <article class="tile-card reveal"><h3>RRHH y oficina</h3><p>Documentos del personal, horarios, fichajes y warning letters, que se generan solos.</p></article>
+          <article class="tile-card reveal"><h3>Automatizar cualquier cosa</h3><p>Emails, pedidos a proveedores, informes, facturas: si lo haces cada semana, lo automatizamos.</p></article>
+          <article class="tile-card reveal"><h3>Siempre funcionando</h3><p>Lo montamos, lo mantenemos y lo ajustamos cada mes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block light" id="marketing" aria-labelledby="mk-title">
+      <div class="wrap">
+        <div class="head reveal">
+          <span class="label">Marketing</span>
+          <h2 id="mk-title">Marketing con tus propios números</h2>
+          <p>Sin adivinar: usamos tus ventas para decidir cuándo y cómo traer más clientes.</p>
+        </div>
+        <div class="tiles three">
+          <article class="tile-card reveal"><h3>Tus horas fuertes</h3><p>Leemos tus ventas para ver cuándo se llena y cuándo se vacía la sala, hora a hora.</p></article>
+          <article class="tile-card reveal"><h3>Happy hours y promociones</h3><p>Ofertas pensadas para tus horas flojas, donde traen clientes sin regalar las fuertes.</p></article>
+          <article class="tile-card reveal"><h3>Cartas que se adaptan</h3><p>Cartas dinámicas y recomendaciones que cambian con la hora y con lo que se vende.</p></article>
+          <article class="tile-card reveal"><h3>Campañas por WhatsApp</h3><p>Novedades y ofertas a quien ya vino: el cliente más fácil de recuperar.</p></article>
+          <article class="tile-card reveal"><h3>Fotos y vídeo</h3><p>Fotos y vídeo de tus platos, hechos con IA.</p></article>
+          <article class="tile-card reveal"><h3>Redes sociales</h3><p>Contenido nuevo para tus redes cada mes.</p></article>
         </div>
       </div>
     </section>
@@ -474,9 +547,9 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
           </article>
           <article class="person reveal">
             <div class="who"><img class="avatar" src="fotos/equipo-yusri.jpg" width="360" height="360" alt="Mohd Yusri Mohd Yusoff" loading="lazy" decoding="async"></div>
-            <span class="role">Chef ejecutivo · Malasia</span>
+            <span class="role">Chef ejecutivo</span>
             <h3>Mohd Yusri Mohd Yusoff</h3>
-            <p>Más de 25 años en cocina, de los hoteles de Kuala Lumpur a Oriente Medio. Chef de cocina en el Anantara Desaru, chef ejecutivo de grupo de Hyde Park en Malasia, jefe de cocina de La Bodega en Bangsar y chef ejecutivo en el proyecto NEOM, en Arabia Saudí. Cocina occidental, asiática y de Oriente Medio, control de costes y seguridad alimentaria. Habla malayo e inglés.</p>
+            <p>Más de 25 años en cocina, de los hoteles de Kuala Lumpur a Oriente Medio. Chef de cocina en el Anantara Desaru, chef ejecutivo de grupo de Hyde Park en Malasia, jefe de cocina de La Bodega en Bangsar, donde trabajó con Basilio, y chef ejecutivo en el proyecto NEOM, en Arabia Saudí. Cocina occidental, asiática y de Oriente Medio, control de costes y seguridad alimentaria. Habla malayo e inglés.</p>
             <p class="tags">Cocinas de Malasia · Operaciones a gran escala · Seguridad alimentaria</p>
           </article>
         </div>
@@ -518,7 +591,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
         </div>
         <ol class="steps">
           <li class="reveal"><span class="n">01</span><h3>Una llamada de 15 minutos</h3><p>Por WhatsApp. Nos cuentas tu restaurante y te decimos con sinceridad si podemos ayudarte.</p></li>
-          <li class="reveal"><span class="n">02</span><h3>Auditoría estratégica</h3><p>Cocina, números, equipo y procesos, con una propuesta con precio.</p></li>
+          <li class="reveal"><span class="n">02</span><h3>Diagnóstico</h3><p>Miramos tu cocina, tus números, tu equipo y tus procesos, y te decimos qué arreglaríamos primero.</p></li>
           <li class="reveal"><span class="n">03</span><h3>Un plan por fases</h3><p>Cada fase es un hito, con su entregable y su fecha.</p></li>
           <li class="reveal"><span class="n">04</span><h3>Resultados en ringgit</h3><p>Food cost antes y después, y lo que ahorras en un año.</p></li>
         </ol>
@@ -555,6 +628,8 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <label><input type="checkbox" name="needs" value="Equipo y formación"><span>Equipo y formación</span></label>
             <label><input type="checkbox" name="needs" value="Costes y carta"><span>Costes y carta</span></label>
             <label><input type="checkbox" name="needs" value="Operación y clientes"><span>Operación y clientes</span></label>
+            <label><input type="checkbox" name="needs" value="IA y automatización"><span>IA y automatización</span></label>
+            <label><input type="checkbox" name="needs" value="Marketing"><span>Marketing</span></label>
             <label><input type="checkbox" name="needs" value="Aún no lo sé"><span>Aún no lo sé</span></label>
           </fieldset>
           <label class="field"><span>Email *</span><input name="email" type="email" autocomplete="email" required></label>

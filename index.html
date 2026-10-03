@@ -175,6 +175,7 @@ p { margin: 0; }
 .group { margin-top: 56px; display: grid; gap: 8px; justify-items: start; }
 .group p { color: var(--ivory-dim); }
 .group + .people { margin-top: 20px; }
+.people.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .stats { margin: 56px auto 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--hair); }
 .stats div { padding: 28px 24px; display: grid; gap: 8px; justify-items: center; text-align: center; }
 .stats div + div { border-left: 1px solid var(--hair); }
@@ -272,7 +273,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
   .milestone:nth-child(even) .ph { order: 0; }
   .milestone .ph { min-height: 0; aspect-ratio: 4 / 3; }
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .people { grid-template-columns: minmax(0, 1fr); }
+  .people, .people.three { grid-template-columns: minmax(0, 1fr); }
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .origins ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -519,16 +520,16 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
         <div class="head reveal">
           <span class="label">The people</span>
           <h2 id="team-title">Chefs first</h2>
-          <p>HITO was born in the kitchens of Kuala Lumpur, where Basilio and Iker worked together. Chefs who have run kitchens and whole restaurant groups between Malaysia, Spain and the Middle East, and our own AI team, which builds the tools behind every service.</p>
+          <p>HITO was founded by Basilio, Iker and Anaïs, and born in the kitchens of Kuala Lumpur, where Basilio and Iker worked together. Executive chefs who have run kitchens and whole restaurant groups between Malaysia, Spain and the Middle East, and our own AI team, which builds the tools behind every service.</p>
         </div>
         <div class="stats reveal">
           <div><b>90+</b><span>years in hospitality between the four of us</span></div>
           <div><b>15</b><span>restaurants led in Kuala Lumpur</span></div>
           <div><b>110</b><span>people in the largest kitchen team we have led</span></div>
         </div>
-        <div class="group reveal"><span class="label">The kitchen</span>
-          <p>Chefs who run kitchens, teams and whole restaurant groups.</p></div>
-        <div class="people">
+        <div class="group reveal"><span class="label">Founders</span>
+          <p>A chef who knows Kuala Lumpur inside out, and two AI engineers who come from hospitality.</p></div>
+        <div class="people three">
           <article class="person reveal">
             <div class="who"><img class="avatar" src="fotos/equipo-basilio.jpg" width="360" height="360" alt="Basilio Martin Garcia" loading="lazy" decoding="async"><span class="pill">HITO is his idea</span></div>
             <span class="role">Executive Chef · Kuala Lumpur</span>
@@ -536,17 +537,6 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <p>Nearly 30 years in kitchens, from Michelin-starred restaurants in Mallorca to group executive chef of fifteen restaurants in Kuala Lumpur, with teams of up to 110 people. He knows the market, the chefs and the owners. HITO was his idea.</p>
             <p class="tags">Michelin-starred kitchens · Restaurant groups · Teams that stay</p>
           </article>
-          <article class="person reveal">
-            <div class="who"><img class="avatar" src="fotos/equipo-yusri.jpg" width="360" height="360" alt="Mohd Yusri Mohd Yusoff" loading="lazy" decoding="async"></div>
-            <span class="role">Executive Chef</span>
-            <h3>Mohd Yusri Mohd Yusoff</h3>
-            <p>Over 25 years in kitchens, from Kuala Lumpur hotels to the Middle East. Chef de cuisine at Anantara Desaru, group executive chef of Hyde Park in Malaysia, head chef of La Bodega in Bangsar, where he worked with Basilio, and executive chef on the NEOM project in Saudi Arabia. Western, Asian and Middle Eastern cuisine, cost control and food safety. Speaks Malay and English.</p>
-            <p class="tags">Malaysian kitchens · Large-scale operations · Food safety</p>
-          </article>
-        </div>
-        <div class="group reveal"><span class="label">AI &amp; technology</span>
-          <p>Two AI engineers who come from hospitality. In the last two years they have studied AI and built three software products: cost control for restaurants, property management and invoice matching.</p></div>
-        <div class="people">
           <article class="person reveal">
             <div class="who"><img class="avatar" src="fotos/equipo-iker.jpg" width="360" height="360" alt="Iker Fernández Caballero" loading="lazy" decoding="async"></div>
             <span class="role">AI Engineer · Chef</span>
@@ -560,6 +550,17 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <h3>Anaïs Moragón</h3>
             <p>AI automation expert specialised in n8n, who comes from the hospitality sector: workflows, APIs and POS integrations that make the repetitive work of a restaurant run on its own. For the last two years she has trained in generative AI and SaaS development, and with Iker she has created three software products: CosteOS for restaurant cost control, a property-management platform and an invoice-matching tool.</p>
             <p class="tags">n8n automation · AI · Integrations</p>
+          </article>
+        </div>
+        <div class="group reveal"><span class="label">Our chefs</span>
+          <p>Executive chefs who run our kitchens and teams.</p></div>
+        <div class="people">
+          <article class="person reveal">
+            <div class="who"><img class="avatar" src="fotos/equipo-yusri.jpg" width="360" height="360" alt="Mohd Yusri Mohd Yusoff" loading="lazy" decoding="async"></div>
+            <span class="role">Executive Chef</span>
+            <h3>Mohd Yusri Mohd Yusoff</h3>
+            <p>Over 25 years in kitchens, from Kuala Lumpur hotels to the Middle East. Chef de cuisine at Anantara Desaru, group executive chef of Hyde Park in Malaysia, head chef of La Bodega in Bangsar, where he worked with Basilio, and executive chef on the NEOM project in Saudi Arabia. Western, Asian and Middle Eastern cuisine, cost control and food safety. Speaks Malay and English.</p>
+            <p class="tags">Malaysian kitchens · Large-scale operations · Food safety</p>
           </article>
         </div>
         <div class="origins reveal">

@@ -169,6 +169,7 @@ p { margin: 0; }
 .origins li { padding: 22px 16px; display: grid; gap: 6px; border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
 .origins li b { font: 500 clamp(20px, 1.8vw, 24px)/1.1 var(--display); }
 .origins li span { font-size: 12px; letter-spacing: 0.06em; color: var(--granite); }
+.origins li .stars { font: 500 11px/1.2 var(--body); font-style: normal; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
 
 /* Chefs first: the team */
 .stats { margin: 56px auto 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--hair); }
@@ -461,7 +462,7 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
             <div class="who"><img class="avatar" src="fotos/equipo-iker.jpg" width="360" height="360" alt="Iker Fernández Caballero" loading="lazy" decoding="async"></div>
             <span class="role">Chef ejecutivo · Costes</span>
             <h3>Iker Fernández Caballero</h3>
-            <p>28 años en cocina. Formado en la escuela Luis Irizar de San Sebastián, con stage en Arzak. Ocho años como chef ejecutivo en Kuala Lumpur desde 2016, con el grupo Out2Dine, junto a Basilio. Creador de CosteOS, el método de costes que usamos con cada cliente.</p>
+            <p>28 años en cocina. Formado en la escuela Luis Irizar de San Sebastián, con stage en Arzak (tres estrellas Michelin). Ocho años como chef ejecutivo en Kuala Lumpur desde 2016, con el grupo Out2Dine, junto a Basilio. Creador de CosteOS, el método de costes que usamos con cada cliente.</p>
             <p class="tags">Food cost con merma real · Ingeniería de menú · Preapertura</p>
           </article>
           <article class="person reveal">
@@ -476,15 +477,19 @@ footer .meta { font-size: 13px; color: var(--granite); text-align: right; displa
           <span class="label">De dónde venimos</span>
           <p>Cocinas, salas y hoteles en los que hemos trabajado.</p>
           <ul>
-            <li><b>Arzak</b><span>San Sebastián · stage</span></li>
-            <li><b>Sa Font des Teix</b><span>Deià · estrella Michelin</span></li>
-            <li><b>Read's</b><span>Mallorca · estrella Michelin</span></li>
-            <li><b>La Residencia</b><span>Deià · El Olivo</span></li>
+            <li><b>Arzak</b><em class="stars">★★★ Michelin</em><span>San Sebastián · stage</span></li>
+            <li><b>Sa Font des Teix</b><em class="stars">★ Michelin</em><span>Deià, Mallorca</span></li>
+            <li><b>Read's</b><em class="stars">★ Michelin</em><span>Santa Maria, Mallorca</span></li>
+            <li><b>La Residencia</b><em class="stars">★★★★★ Hotel</em><span>Deià · El Olivo</span></li>
             <li><b>Out2Dine Group</b><span>Kuala Lumpur · 8 restaurantes</span></li>
             <li><b>Gastrodome · La Bodega</b><span>Kuala Lumpur · 7 restaurantes</span></li>
-            <li><b>Kandima</b><span>Maldivas · resort de 5 estrellas</span></li>
-            <li><b>Gran Hotel Sóller</b><span>Mallorca · hotel de 5 estrellas</span></li>
-            <li><b>Meliá Araguaney</b><span>Santiago · hotel de 5 estrellas</span></li>
+            <li><b>Kandima</b><em class="stars">★★★★★ Resort</em><span>Maldivas</span></li>
+            <li><b>Gran Hotel Sóller</b><em class="stars">★★★★★ Hotel</em><span>Mallorca</span></li>
+            <li><b>Meliá Araguaney</b><em class="stars">★★★★★ Hotel</em><span>Santiago de Compostela</span></li>
+            <li><b>Gran Hotel La Toja</b><em class="stars">★★★★★ Hotel</em><span>Galicia</span></li>
+            <li><b>Hotel Los Geranios</b><em class="stars">★★★★ Hotel</em><span>Mallorca</span></li>
+            <li><b>Hotel El Guía</b><em class="stars">★★★★ Hotel</em><span>Sóller, Mallorca</span></li>
+            <li><b>Hotel Londres</b><em class="stars">★★★★ Hotel</em><span>San Sebastián · prácticas</span></li>
             <li><b>A Creba</b><span>Galicia · isla privada</span></li>
             <li><b>Pazo do Souto</b><span>A Coruña · pazo del siglo XVII</span></li>
             <li><b>Bicoca</b><span>Galicia · ganador de la Tapa de Oro</span></li>

@@ -881,6 +881,21 @@ var LEAD_ACCESS_KEY = '3c18621f-88a0-43f6-a3aa-4ba29c69192a';
 })();
 </script>
 <script>
+// WhatsApp buttons: on a phone wa.me opens the app straight in the chat, but on a computer it stops on a
+// WhatsApp landing page ("Continue to chat"). There we open WhatsApp Web directly in that number's chat, with the
+// message already written. Delegated, so it also works after the ES/EN switch rebuilds the texts.
+(function () {
+  if (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) return;
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('a[href^="https://wa.me/"]');
+    if (!a) return;
+    var u = new URL(a.href), phone = u.pathname.replace(/\D/g, ''), text = u.searchParams.get('text') || '';
+    ev.preventDefault();
+    window.open('https://web.whatsapp.com/send?phone=' + phone + (text ? '&text=' + encodeURIComponent(text) : ''), '_blank', 'noopener');
+  });
+})();
+</script>
+<script>
 // Content reveal: fade blocks up as they enter the screen. Independent of the 3D scene.
 (function () {
   if (!('IntersectionObserver' in window)) return;
